@@ -52,7 +52,6 @@ $(document).ready(
 
     for (var i = 0; i < toDoList.length; i++) {
 
-      var contextMain = toDoList[i];
       var html = templateMain(toDoList[i]);
       $("main #todo_list").append(html);
 
