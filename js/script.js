@@ -38,6 +38,12 @@ $(document).ready(
       },
     ];
 
+    $(document).on("click", "i.fa-trash-alt",
+      function() {
+        $(this).parents("li").remove();
+      }
+    );
+
     var sourceMain = $("#todo_template").html();
     var templateMain = Handlebars.compile(sourceMain);
 
@@ -48,6 +54,7 @@ $(document).ready(
       $("main #todo_list").append(html);
 
     }
+
     // MAIN-------------------------------------------------
 
 
