@@ -79,8 +79,5 @@ $(document).ready(
 
 // FUNZIONI-------------------------------------------------
 function capitalizerFirstLetter(word) {
-  var lowercaseWord = word.toLowerCase();
-  var upperCaseFirstLetter = lowercaseWord[0].toUpperCase();
-  var tinyRest = lowercaseWord.slice(1);
-  return upperCaseFirstLetter + tinyRest;
+  return word[0].toUpperCase() + (word.toLowerCase()).slice(1);
 }
