@@ -5,6 +5,8 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- foglio di stile personale -->
     <link rel="stylesheet" href="css/style.css">
     <!-- jQuery -->
@@ -16,7 +18,22 @@
     <title>Todo clone</title>
   </head>
   <body>
+
     <header></header>
+
+    <main>
+      <h2><em>TO DO LIST:</em></h2>
+
+      <div class="todo_input">
+        <input type="text" name="todo" value="">
+        <button type="button" name="button">INSERISCI!</button>
+      </div>
+
+      <div class="list_block">
+        <ul id="todo_list"></ul>
+      </div>
+    </main>
+
 
 
     <script id="entry-template" type="text/x-handlebars-template">
@@ -24,6 +41,15 @@
         <h1>{{title}}</h1>
         <p class="body">{{body}}</p>
       </div>
+    </script>
+
+    <script id="todo_template" type="text/x-handlebars-template">
+      <li>
+        <div class="li_content">
+          <em>{{todoContent}}</em>
+        </div>
+        <span><i class="fas fa-trash-alt"></i></span>
+      </li>
     </script>
 
   </body>
