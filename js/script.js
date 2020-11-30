@@ -68,6 +68,7 @@ $(document).ready(
         oggettoCreatoUtente.todoContent = inputValue;
         var html = templateMain(oggettoCreatoUtente);
         $("#todo_list").append(html);
+        inputValue = $("input").val("");
 
       }
     );
