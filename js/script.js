@@ -38,11 +38,24 @@ $(document).ready(
       },
     ];
 
+    // evento al click delete
     $(document).on("click", "i.fa-trash-alt",
       function() {
         $(this).parents("li").remove();
       }
     );
+
+    // evento al click del bottone
+    var oggettoCreatoUtente = {};
+    $(".todo_input > button").click(
+      function() {
+        var inputValue = $("input").val();
+        oggettoCreatoUtente.todoContent = inputValue;
+        toDoList.push(oggettoCreatoUtente);
+        console.log(toDoList);
+      }
+    );
+
 
     var sourceMain = $("#todo_template").html();
     var templateMain = Handlebars.compile(sourceMain);

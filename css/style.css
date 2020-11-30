@@ -45,7 +45,8 @@ main {
   border-radius: 20px;
   text-transform: uppercase;
 }
-.todo_input > input:focus {
+.todo_input > input:focus,
+.todo_input > button:focus {
   outline: none;
 }
 .todo_input > button {
