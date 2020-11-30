@@ -45,18 +45,8 @@ $(document).ready(
       }
     );
 
-    // evento al click del bottone
-    var oggettoCreatoUtente = {};
-    $(".todo_input > button").click(
-      function() {
-        var inputValue = $("input").val();
-        oggettoCreatoUtente.todoContent = inputValue;
-        toDoList.push(oggettoCreatoUtente);
-        console.log(toDoList);
-      }
-    );
 
-
+    // scrivo in pagina la mia lista di oggetti
     var sourceMain = $("#todo_template").html();
     var templateMain = Handlebars.compile(sourceMain);
 
@@ -67,6 +57,20 @@ $(document).ready(
       $("main #todo_list").append(html);
 
     }
+
+    // evento al click del bottone
+    var oggettoCreatoUtente = {};
+
+    $(".todo_input > button").click(
+      function() {
+
+        var inputValue = $("input").val();
+        oggettoCreatoUtente.todoContent = inputValue;
+        var html = templateMain(oggettoCreatoUtente);
+        $("#todo_list").append(html);
+
+      }
+    );
 
     // MAIN-------------------------------------------------
 
