@@ -2,4 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* generale */
+header {
+  padding: 20px 0;
+  background-color: #19191c;
+  color: #277565;
+}
+h1,
+header p {
+  text-align: center;
+  font-weight: 700;
 }
