@@ -64,17 +64,23 @@ $(document).ready(
     $(".todo_input > button").click(
       function() {
 
-        var inputValue = $("input").val();
+        var inputValue = capitalizerFirstLetter($("input").val());
         oggettoCreatoUtente.todoContent = inputValue;
         var html = templateMain(oggettoCreatoUtente);
         $("#todo_list").append(html);
         inputValue = $("input").val("");
-
       }
     );
-
     // MAIN-------------------------------------------------
 
 
   }
 );
+
+// FUNZIONI-------------------------------------------------
+function capitalizerFirstLetter(word) {
+  var lowercaseWord = word.toLowerCase();
+  var upperCaseFirstLetter = lowercaseWord[0].toUpperCase();
+  var tinyRest = lowercaseWord.slice(1);
+  return upperCaseFirstLetter + tinyRest;
+}
